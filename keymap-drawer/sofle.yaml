@@ -50,8 +50,8 @@ layers:
   - B
   - M
   - W
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - V
+  - Z
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-control$$
