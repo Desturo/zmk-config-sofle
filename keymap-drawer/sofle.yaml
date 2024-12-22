@@ -54,8 +54,8 @@ layers:
   - Z
   - {t: '-', s: _}
   - $$mdi:volume-off$$
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:keyboard-space$$
   - layer1
@@ -64,7 +64,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:apple-keyboard-shift$$
+  - RGUI
   layer1:
   - {t: '`', s: '~'}
   - F1
