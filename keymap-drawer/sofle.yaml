@@ -89,7 +89,7 @@ layers:
   - PG UP
   - END
   - $$mdi:arrow-up-bold$$
-  - HOMEs
+  - HOME
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
