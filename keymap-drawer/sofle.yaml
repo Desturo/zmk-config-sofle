@@ -82,7 +82,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
   - $$mdi:mouse-left-click-outline$$
-  - {t: ., s: '>'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
   - '&mkp MB4'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
@@ -95,7 +95,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
   - {t: '$$mdi:transfer$$', type: trans}
-  - E
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB5'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
