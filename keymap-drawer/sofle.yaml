@@ -81,10 +81,10 @@ layers:
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
   - F
-  - '&mkp G'
+  - G
   - {t: '$$mdi:transfer$$', type: trans}
   - C
-  - R
+  - MB4
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - PG UP
   - END
@@ -108,8 +108,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB OFF
   - RGB ON
-  - RGB EFF
-  - RGB EFR
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - RGB SPI
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - RGB BRI
