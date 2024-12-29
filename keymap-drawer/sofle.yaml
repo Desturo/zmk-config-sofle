@@ -110,7 +110,7 @@ layers:
   - RGB ON
   - {t: '-', s: _}
   - {t: '=', s: +}
-  - RGB SPI
+  - F13
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - RGB BRI
   - RGB BRD
