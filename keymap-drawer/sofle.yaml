@@ -7,7 +7,7 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - $$mdi:arrow-up-bold$$
+  - PLAY PAUSE
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -20,7 +20,7 @@ layers:
   - {t: ., s: '>'}
   - P
   - Y
-  - $$mdi:arrow-down-bold$$
+  - $$mdi:volume-off$$
   - F
   - G
   - C
@@ -33,7 +33,7 @@ layers:
   - E
   - U
   - I
-  - $$mdi:arrow-left-bold$$
+  - PREVIOUS
   - D
   - H
   - T
@@ -46,14 +46,14 @@ layers:
   - J
   - K
   - X
-  - $$mdi:arrow-right-bold$$
+  - $$mdi:skip-next$$
   - B
   - M
   - W
   - V
   - Z
   - {t: '-', s: _}
-  - $$mdi:volume-off$$
+  - F13
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
@@ -118,7 +118,7 @@ layers:
   - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
