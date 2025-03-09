@@ -133,7 +133,7 @@ layers:
   '2':
   - '~'
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:bluetooth-connect$$
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
@@ -251,7 +251,7 @@ layers:
   - F13
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
-  - SHIFT
+  - $$mdi:apple-keyboard-shift$$
   - $$mdi:keyboard-space$$
   - LAYER1
   - {t: '$$mdi:keyboard-return$$', type: enter}
