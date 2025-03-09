@@ -235,7 +235,7 @@ layers:
   - N
   - S
   - {t: '$$mdi:backspace$$', type: backspace}
-  - SHIFT
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
