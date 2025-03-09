@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: sofle/rev1}
+layout: {zmk_keyboard: sofle}
 layers:
   LAYER0:
   - {t: '[', s: '{'}
@@ -58,14 +58,14 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:keyboard-space$$
-  - layer1
+  - LAYER1
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - '2'
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:backspace-reverse-outline$$
   - RGUI
-  layer1:
+  LAYER1:
   - {t: '`', s: '~'}
   - F1
   - F2
@@ -182,7 +182,7 @@ layers:
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
   - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: GAME, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -195,3 +195,68 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  GAME:
+  - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - PLAY PAUSE
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: \, s: '|'}
+  - $$mdi:keyboard-tab$$
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - $$mdi:volume-off$$
+  - F
+  - G
+  - C
+  - R
+  - L
+  - {t: /, s: '?'}
+  - $$mdi:apple-keyboard-caps$$
+  - A
+  - S
+  - D
+  - F
+  - G
+  - PREVIOUS
+  - D
+  - H
+  - T
+  - N
+  - S
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - SHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - $$mdi:skip-next$$
+  - B
+  - M
+  - W
+  - V
+  - Z
+  - {t: '-', s: _}
+  - F13
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
+  - SHIFT
+  - $$mdi:keyboard-space$$
+  - LAYER1
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: LAYER1, h: toggle}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:backspace-reverse-outline$$
+  - RGUI
