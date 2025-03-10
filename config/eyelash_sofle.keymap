@@ -43,11 +43,11 @@
 
         layer0 {
             bindings = <
-&kp LEFT_BRACKET   &kp N1    &kp N2     &kp N3          &kp N4     &kp N5    &kp UP_ARROW     &kp N6  &kp N7     &kp N8     &kp N9      &kp N0    &kp BSLH
-&kp RIGHT_BRACKET  &kp APOS  &kp COMMA  &kp DOT         &kp P      &kp Y     &kp DOWN_ARROW   &kp F   &kp G      &kp C      &kp R       &kp L     &kp FSLH
-&kp TAB            &kp A     &kp O      &kp E           &kp U      &kp I     &kp LEFT_ARROW   &kp D   &kp H      &kp T      &kp N       &kp S     &kp BSPC
-&kp GRAVE          &kp SEMI  &kp Q      &kp J           &kp K      &kp X     &kp RIGHT_ARROW  &kp B   &kp M      &kp W      &kp V       &kp Z     &kp MINUS
-&kp C_MUTE         &kp LALT  &kp LCTRL  &mt LSHIFT ESC  &kp SPACE  &mo 1     &kp ENTER        &mo 2   &kp SPACE  &kp ENTER  &kp DELETE  &kp RGUI
+&kp LEFT_BRACKET   &kp N1          &kp N2          &kp N3            &kp N4       &kp N5     &kp K_PLAY_PAUSE  &kp N6     &kp N7       &kp N8       &kp N9           &kp N0           &kp BSLH
+&kp RIGHT_BRACKET  &kp APOS        &kp COMMA       &kp DOT           &kp P        &kp Y      &kp K_MUTE        &kp F      &kp G        &kp C        &kp R            &kp L            &kp FSLH
+&kp TAB            &mt A LEFT_GUI  &mt O LEFT_ALT  &mt E LEFT_SHIFT  &mt U LCTRL  &kp I      &kp K_BACK        &kp D      &mt H RCTRL  &mt T RSHFT  &mt N RIGHT_ALT  &mt S RIGHT_GUI  &kp BSPC
+&kp GRAVE          &kp SEMI        &kp Q           &kp J             &kp K        &kp X      &kp K_FORWARD     &kp B      &kp M        &kp W        &kp V            &kp Z            &kp MINUS
+&kp C_MUTE         &to 4           &mo 1           &kp ESCAPE        &kp SPACE    &kp RET    &kp ENTER         &kp ENTER  &kp SPACE    &kp DEL      &mo 2            &to 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -56,24 +56,24 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp GRAVE   &kp F1            &kp F2         &kp F3            &kp F4             &kp F5            &mmv MOVE_UP     &kp F6         &kp F7         &kp F8                &kp F9                 &kp F10       &trans
+&trans      &kp SINGLE_QUOTE  &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT           &mmv MOVE_DOWN   &kp AMPERSAND  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &trans
+&trans      &kp EXCLAMATION   &kp MINUS      &kp KP_PLUS       &kp KP_EQUAL       &kp POUND         &mmv MOVE_LEFT   &kp PIPE       &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
+&trans      &kp CARET         &kp KP_SLASH   &kp KP_ASTERISK   &kp K_BACK         &kp UNDERSCORE    &mmv MOVE_RIGHT  &kp TILDE      &kp DOLLAR     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
+&kp C_MUTE  &trans            &trans         &trans            &trans             &trans            &mkp LCLK        &trans         &trans         &trans                &trans                 &trans
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &to 3
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
+&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &trans  &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
+&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &trans  &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
+&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &trans  &trans  &trans  &sys_reset  &soft_off  &bootloader  &to 3
+&trans     &trans        &trans          &trans        &trans        &trans          &trans  &trans  &trans  &trans      &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -86,6 +86,16 @@
 &kp CAPSLOCK    &kp A         &kp S         &kp D         &kp F         &kp G        &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B        &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp F13         &kp ESC       &kp LEFT_ALT  &kp LCTRL     &kp SPACE     &kp ENTER    &trans  &to 0   &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4    &trans  &trans           &trans           &trans           &trans           &trans           &trans
+&trans      &trans           &trans           &trans           &trans           &trans          &trans  &trans           &trans           &trans           &trans           &trans           &trans
+&trans      &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &trans          &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans
+&trans      &trans           &trans           &trans           &trans           &trans          &trans  &trans           &trans           &trans           &trans           &trans           &trans
+&trans      &trans           &trans           &trans           &trans           &to 0           &trans  &trans           &trans           &trans           &trans           &trans
             >;
         };
     };
