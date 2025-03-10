@@ -13,6 +13,10 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
+&mt {
+	tapping-term-ms = <180>;
+};
+
 &msc {
     acceleration-exponent = <1>;      // 0
     time-to-max-speed-ms = <100>;       // 300
@@ -57,7 +61,7 @@
             bindings = <
 &kp GRAVE   &kp F1            &kp F2         &kp F3            &kp F4             &kp F5            &mmv MOVE_UP     &kp F6         &kp F7         &kp F8                &kp F9                 &kp F10       &trans
 &trans      &kp SINGLE_QUOTE  &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT           &mmv MOVE_DOWN   &kp AMPERSAND  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &trans
-&trans      &kp EXCLAMATION   &kp MINUS      &kp KP_PLUS       &kp KP_EQUAL       &kp POUND         &mmv MOVE_LEFT   &kp PIPE       &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
+&trans      &kp EXCLAMATION   &kp MINUS      &kp PLUS	       &kp EQUAL	       &kp POUND         &mmv MOVE_LEFT   &kp PIPE       &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
 &trans      &kp CARET         &kp KP_SLASH   &kp KP_ASTERISK   &kp K_BACK         &kp UNDERSCORE    &mmv MOVE_RIGHT  &kp TILDE      &kp DOLLAR     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
 &kp C_MUTE  &trans            &trans         &trans            &trans             &trans            &mkp LCLK        &trans         &trans         &trans                &trans                 &trans
             >;
