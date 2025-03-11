@@ -82,7 +82,7 @@
 
         layer_3 {
             bindings = <
-&kp GRAVE       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5       &trans     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp N
+&kp GRAVE       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5       &trans     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T        &kp        &kp     &kp     &kp     &kp     &kp     &kp 
 &kp CAPSLOCK    &kp A         &kp S         &kp D         &kp F         &kp G        &kp        &kp     &kp     &kp     &kp     &kp     &kp 
 &kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B        &kp        &kp     &kp     &kp     &kp     &kp     &kp 
