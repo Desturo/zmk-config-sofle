@@ -52,7 +52,7 @@ layers:
   - V
   - Z
   - {t: '-', s: _}
-  - $$mdi:volume-off$$
+  - F13
   - {t: Controls, h: toggle}
   - Symbol
   - $$mdi:keyboard-esc$$
@@ -117,7 +117,7 @@ layers:
   - '}'
   - '@'
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-off$$
+  - F13
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -214,39 +214,39 @@ layers:
   - E
   - R
   - T
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - $$mdi:apple-keyboard-caps$$
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - F14
   - A
   - S
   - D
   - F
   - G
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - H
+  - J
+  - K
+  - L
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
   - V
   - B
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - N
+  - M
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - F13
   - $$mdi:keyboard-esc$$
   - $$mdi:apple-keyboard-option$$
