@@ -13,9 +13,7 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&mt {
-	tapping-term-ms = <200>;
-};
+&mt { tapping-term-ms = <200>; };
 
 &msc {
     acceleration-exponent = <1>;      // 0
@@ -46,11 +44,11 @@
 
         layer_0 {
             bindings = <
-&kp LEFT_BRACKET   &kp N1          &kp N2          &kp N3            &kp N4       &kp N5     &kp C_PLAY_PAUSE  &kp N6     &kp N7       &kp N8             &kp N9           &kp N0           &kp BSLH
-&kp RIGHT_BRACKET  &kp APOS        &kp COMMA       &kp DOT           &kp P        &kp Y      &kp C_MUTE        &kp F      &kp G        &kp C              &kp R            &kp L            &kp FSLH
-&kp TAB            &mt LEFT_GUI A  &mt LEFT_ALT O  &mt LEFT_SHIFT E  &mt LCTRL U  &kp I      &kp C_PREVIOUS        &kp D      &mt RCTRL H  &mt RIGHT_SHIFT T  &mt RIGHT_ALT N  &mt RGUI S  &kp BSPC
-&kp GRAVE          &kp SEMI        &kp Q           &kp J             &kp K        &kp X      &kp C_NEXT     &kp B      &kp M        &kp W              &kp V            &kp Z            &kp MINUS
-&kp F13         &to 4           &mo 1           &kp ESCAPE        &kp SPACE    &kp RET    &kp ENTER         &kp ENTER  &kp SPACE    &kp DEL            &mo 2            &to 3
+&kp LEFT_BRACKET   &kp N1          &kp N2          &kp N3            &kp N4       &kp N5     &kp C_PLAY_PAUSE  &kp N6     &kp N7       &kp N8             &kp N9           &kp N0      &kp BSLH
+&kp RIGHT_BRACKET  &kp APOS        &kp COMMA       &kp DOT           &kp P        &kp Y      &kp C_MUTE        &kp F      &kp G        &kp C              &kp R            &kp L       &kp FSLH
+&kp TAB            &mt LEFT_GUI A  &mt LEFT_ALT O  &mt LEFT_SHIFT E  &mt LCTRL U  &kp I      &kp C_PREVIOUS    &kp D      &mt RCTRL H  &mt RIGHT_SHIFT T  &mt RIGHT_ALT N  &mt RGUI S  &kp BSPC
+&kp GRAVE          &kp SEMI        &kp Q           &kp J             &kp K        &kp X      &kp C_NEXT        &kp B      &kp M        &kp W              &kp V            &kp Z       &kp MINUS
+&kp F13            &to 4           &mo 1           &lt 1 ESCAPE      &kp SPACE    &kp RET    &kp ENTER         &kp ENTER  &kp SPACE    &lt 2 DELETE       &mo 2            &to 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -59,11 +57,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1            &kp F2         &kp F3            &kp F4             &kp F5            &mmv MOVE_UP     &kp F6         &kp F7         &kp F8                &kp F9                 &kp F10       &trans
-&trans      &kp SINGLE_QUOTE  &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT           &mmv MOVE_DOWN   &kp AMPERSAND  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &trans
-&trans      &kp EXCLAMATION   &kp MINUS      &kp PLUS	       &kp EQUAL	       &kp POUND         &mmv MOVE_LEFT   &kp PIPE       &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
-&trans      &kp CARET         &kp SLASH   &kp ASTERISK   &kp BACKSLASH         &kp UNDERSCORE    &mmv MOVE_RIGHT  &kp TILDE      &kp DOLLAR     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
-&kp F13  &trans            &trans         &trans            &trans             &trans            &mkp LCLK        &trans         &trans         &trans                &trans                 &trans
+&kp GRAVE  &kp F1            &kp F2         &kp F3            &kp F4             &kp F5            &mmv MOVE_UP     &kp F6         &kp F7         &kp F8                &kp F9                 &kp F10       &trans
+&trans     &kp SINGLE_QUOTE  &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp DOT           &mmv MOVE_DOWN   &kp AMPERSAND  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &trans
+&trans     &kp EXCLAMATION   &kp MINUS      &kp PLUS          &kp EQUAL          &kp POUND         &mmv MOVE_LEFT   &kp PIPE       &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
+&trans     &kp CARET         &kp SLASH      &kp ASTERISK      &kp BACKSLASH      &kp UNDERSCORE    &mmv MOVE_RIGHT  &kp TILDE      &kp DOLLAR     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
+&kp F13    &trans            &trans         &trans            &trans             &trans            &mkp LCLK        &trans         &trans         &trans                &trans                 &trans
             >;
 
             display-name = "Symbol";
@@ -80,15 +78,16 @@
             >;
 
             display-name = "Numbers";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_3 {
             bindings = <
-&kp GRAVE       &kp N1        &kp N2        &kp N3        &kp N4        &kp N5       &trans     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&kp TAB         &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y       &kp U    &kp I    &kp O    &kp P    &trans     &trans 
-&kp F14    &kp A         &kp S         &kp D         &kp F         &kp G        &kp H       &kp J    &kp K    &kp L    &trans     &trans     &trans 
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N       &kp M    &trans    &trans    &trans    &trans    &trans
-&kp F13         &kp ESC       &kp LEFT_ALT  &kp LCTRL     &kp SPACE     &kp ENTER    &trans     &to 0   &trans  &trans  &trans  &trans
+&kp GRAVE       &kp N1   &kp N2        &kp N3     &kp N4     &kp N5       &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&kp TAB         &kp Q    &kp W         &kp E      &kp R      &kp T        &trans  &kp U   &kp I   &kp O   &kp P   &trans  &trans
+&kp F14         &kp A    &kp S         &kp D      &kp F      &kp G        &trans  &kp H   &kp J   &kp K   &kp L   &trans  &trans
+&kp LEFT_SHIFT  &kp Z    &kp X         &kp C      &kp V      &kp B        &trans  &kp N   &kp M   &trans  &trans  &trans  &trans
+&kp F13         &kp ESC  &kp LEFT_ALT  &kp LCTRL  &kp SPACE  &kp ENTER    &trans  &to 0   &trans  &trans  &trans  &to 0
             >;
 
             display-name = "Gaming";
@@ -100,7 +99,7 @@
 &trans      &trans           &trans           &trans           &trans           &trans          &trans  &trans           &trans           &trans           &trans           &trans           &trans
 &trans      &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &trans          &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &trans
 &trans      &trans           &trans           &trans           &trans           &trans          &trans  &trans           &trans           &trans           &trans           &trans           &trans
-&trans      &trans           &trans           &trans           &trans           &to 0           &trans  &trans           &trans           &trans           &trans           &trans
+&trans      &trans           &trans           &trans           &trans           &to 0           &trans  &to 0            &trans           &trans           &trans           &to 0
             >;
 
             display-name = "Controls";
