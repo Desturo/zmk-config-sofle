@@ -38,7 +38,7 @@
 
     behaviors {
 	    my_mod_tap: my_mod_tap {
-		compatible = "zmk,behaviour-tap-dance";
+		compatible = "zmk,behavior-tap-dance";
 		#binding-cells = <0>;
 		tapping-term-ms = <200>;
 		bindings = <&mt RCTRL H>, <&kp H>;
