@@ -38,12 +38,10 @@
 
     behaviors {
 	    my_mod_tap: my_mod_tap {
-		compatible = "zmk,behaviour-hold-tap";
-		label = "MY_MOD_TAP";
-		#binding-cells = <2>;
+		compatible = "zmk,behaviour-tap-dance";
+		#binding-cells = <0>;
 		tapping-term-ms = <200>;
-		quick-tap-ms = <150>;
-		bindings = <&mod_lctl>, <&kp H>;
+		bindings = <&mt RCTRL H>, <&kp H>;
 	    };
     };
 
