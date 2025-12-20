@@ -37,12 +37,15 @@
     };
 
     behaviors {
-	    my_mod_tap: my_mod_tap {
-		compatible = "zmk,behavior-tap-dance";
-		#binding-cells = <0>;
-		tapping-term-ms = <200>;
-		bindings = <&mt RCTRL H>, <&kp H>;
-	    };
+        // This behavior handles: Hold = Mod, Tap = Key, Double-tap-hold = Repeat Key
+        hm_repeat: hm_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>; // Enables the "tap then hold to repeat" logic
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -52,7 +55,7 @@
             bindings = <
 &kp LEFT_BRACKET   &kp N1          &kp N2          &kp N3            &kp N4       &kp N5     &kp UP_ARROW     &kp N6     &kp N7       &kp N8             &kp N9           &kp N0      &kp BSLH
 &kp RIGHT_BRACKET  &kp APOS        &kp COMMA       &kp DOT           &kp P        &kp Y      &kp DOWN_ARROW   &kp F      &kp G        &kp C              &kp R            &kp L       &kp FSLH
-&kp TAB            &mt LEFT_GUI A  &mt LEFT_ALT O  &mt LEFT_SHIFT E  &mt LCTRL U  &kp I      &kp LEFT_ARROW   &kp D      &my_mod_tap/*&mt RCTRL H*/  &mt RIGHT_SHIFT T  &mt RIGHT_ALT N  &mt RGUI S  &kp BSPC
+&kp TAB            &mt LEFT_GUI A  &mt LEFT_ALT O  &mt LEFT_SHIFT E  &mt LCTRL U  &kp I      &kp LEFT_ARROW   &kp D      &hm_repeat RCTRL H		&mt RIGHT_SHIFT T  &mt RIGHT_ALT N  &mt RGUI S  &kp BSPC
 &kp GRAVE          &kp SEMI        &kp Q           &kp J             &kp K        &kp X      &kp RIGHT_ARROW  &kp B      &kp M        &kp W              &kp V            &kp Z       &kp MINUS
 &kp F13            &to 4           &mo 1           &lt 1 ESCAPE      &kp SPACE    &kp RET    &kp ENTER        &kp ENTER  &kp SPACE    &lt 2 DELETE       &mo 2            &to 3
             >;
