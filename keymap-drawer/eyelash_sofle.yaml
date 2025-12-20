@@ -35,7 +35,7 @@ layers:
   - I
   - $$mdi:arrow-left-bold$$
   - D
-  - '&my_mod_tap'
+  - {t: H, h: '$$mdi:apple-keyboard-control$$'}
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: RGUI}
