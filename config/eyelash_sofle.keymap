@@ -37,16 +37,33 @@
     };
 
     behaviors {
-        // This behavior handles: Hold = Mod, Tap = Key, Double-tap-hold = Repeat Key
-        hm_repeat: hm_repeat {
+       /* * Custom hold-tap instance.
+         * This handles Case 1 (Tap) and Case 2 (Hold Modifier).
+         */
+        mt_custom: mod_tap_custom {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>; // Enables the "tap then hold to repeat" logic
+            quick-tap-ms = <200>; // CRITICAL: This enables the double-tap detection
             bindings = <&kp>, <&kp>;
         };
-    };
+
+        /*
+         * Tap-Morph that handles Case 3.
+         * It intercepts a rapid second tap and changes the behavior.
+         */
+        dt_hold_a: double_tap_hold {
+            compatible = "zmk,behavior-tap-morph";
+            #binding-cells = <0>;
+            bindings = <&mt_custom LEFT_GUI A>, <&kp A>; 
+            /* * Replace LSHIFT and A above with your desired default mod/key.
+             * The second binding (<&kp A>) ensures the regular key is sent 
+             * and held when a rapid double-tap occurs.
+             */
+            cloned-morph-ms = <200>; 
+        };
+	};
 
     keymap {
         compatible = "zmk,keymap";
@@ -55,7 +72,7 @@
             bindings = <
 &kp LEFT_BRACKET   &kp N1          &kp N2          &kp N3            &kp N4       &kp N5     &kp UP_ARROW     &kp N6     &kp N7       &kp N8             &kp N9           &kp N0      &kp BSLH
 &kp RIGHT_BRACKET  &kp APOS        &kp COMMA       &kp DOT           &kp P        &kp Y      &kp DOWN_ARROW   &kp F      &kp G        &kp C              &kp R            &kp L       &kp FSLH
-&kp TAB            &mt LEFT_GUI A  &mt LEFT_ALT O  &mt LEFT_SHIFT E  &mt LCTRL U  &kp I      &kp LEFT_ARROW   &kp D      &hm_repeat RCTRL H		&mt RIGHT_SHIFT T  &mt RIGHT_ALT N  &mt RGUI S  &kp BSPC
+&kp TAB            &dt_hold_a	   &mt LEFT_ALT O  &mt LEFT_SHIFT E  &mt LCTRL U  &kp I      &kp LEFT_ARROW   &kp D      &hm_repeat RCTRL H		&mt RIGHT_SHIFT T  &mt RIGHT_ALT N  &mt RGUI S  &kp BSPC
 &kp GRAVE          &kp SEMI        &kp Q           &kp J             &kp K        &kp X      &kp RIGHT_ARROW  &kp B      &kp M        &kp W              &kp V            &kp Z       &kp MINUS
 &kp F13            &to 4           &mo 1           &lt 1 ESCAPE      &kp SPACE    &kp RET    &kp ENTER        &kp ENTER  &kp SPACE    &lt 2 DELETE       &mo 2            &to 3
             >;
