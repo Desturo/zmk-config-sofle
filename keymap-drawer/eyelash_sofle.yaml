@@ -28,14 +28,14 @@ layers:
   - L
   - {t: /, s: '?'}
   - $$mdi:keyboard-tab$$
-  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - '&dt_hold_a'
   - {t: O, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: U, h: '$$mdi:apple-keyboard-control$$'}
   - I
   - $$mdi:arrow-left-bold$$
   - D
-  - {t: H, h: '$$mdi:apple-keyboard-control$$'}
+  - '&hm_repeat RCTRL H'
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: RGUI}
